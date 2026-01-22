@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var txt = "Hello World"
+
+        console.log("text is:", txt);
+        console.log("length is:", txt.length);
+        console.log("uppercase is:", txt.toUpperCase());
+        console.log("lowercase is:", txt.toLowerCase());
+
+        console.log("index of a is:", txt.indexOf("a"));
+        console.log("lower in of a is:", txt.toLowerCase().indexOf("a"));
+        console.log("substring is:" + txt.substring(10, 15));
+
+        var word = txt.split(" ");
+        console.log("split is:", word);
+
+
+        // ask the user to enter a email address 
+        // check i  f it contains this form 
+        // xyz@gmail.com
+        //check if the email contains is valid 
+        // it should have in the place of xyz  a to z letters
+
+        const email = prompt("Enter your email address:");
+
+        if (email.endsWith("@gmail.com")) {
+            alert("Valid Gmail address.");
+        } else {
+            alert("Invalid Gmail address.");
+        }
+        console.log("email is:", email);
+
+    </script>
+
+</body>
+
+</html>

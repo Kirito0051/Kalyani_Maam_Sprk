@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>para 01</p>
+    <p>para 02</p>
+    <p>para 03</p>
+    <p>para 04</p>
+    <p>para 05</p>
+    <button id="mybtn">change all</button>
+
+    <script>
+        var allPara = document.querySelectorAll("p");
+        document.querySelector("#mybtn").addEventListener(
+            "click", () => {
+                allPara.forEach(ele => { ele.innerText = "changed para" })
+            }
+        )
+    </script>
+
+</body>
+
+</html>

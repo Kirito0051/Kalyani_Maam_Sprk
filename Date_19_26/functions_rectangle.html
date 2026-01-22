@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2 id="output"></h2>
+
+    <script>
+        function rectangle(l, b) {
+            let area = l * b;
+            return area;
+        }
+
+        let l = 5;
+        let b = 6;
+        let rect = rectangle(l, b);
+        console.log("area of rectangle with length " + l + " and breath " + b + " is " + rect);
+
+
+        document.getElementById("output").innerHTML = "area is " + rectangle(l, b);
+
+    </script>
+</body>
+
+</html>

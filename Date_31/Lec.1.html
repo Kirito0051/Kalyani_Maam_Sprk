@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+            border: 5px solid black;
+            margin-bottom: 10px;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div class="box"></div>
+
+        <select id="selColor">
+            <option value="salmon">Red</option>
+            <option value="lightblue">Blue</option>
+            <option value="lightgreen">Green</option>
+        </select>
+
+        <script>
+            //event information (ev)
+            //click, dblclick, hover, etc are events in JS
+            //when these events occur - js passes an object containing event information
+            var bx = document.querySelector(".box");
+            document.querySelector("#selColor").addEventListener("change",
+                function (ev) {
+                    var color = ev.target.value;
+                    bx.style.backgroundColor = color;
+                    //In JS you cannot write background-color
+                    //as it will be interpreted as background minus color
+                    //backgroundColor
+                    //fontweight, borderRadius
+                });
+        </script>
+    </body>
+
+</html>

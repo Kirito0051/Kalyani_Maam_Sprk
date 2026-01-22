@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // while loop do while loop and for loop examples
+        var i = 1;
+        console.log("while loop:");
+        while (i <= 5) {
+            console.log(i);
+            i++;
+        }
+
+        console.log("do-while loop:");
+        i = 1;
+        do {
+            console.log(i);
+            i++;
+        } while (i <= 5);
+
+
+        console.log("for loop:");
+        for (var i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+    </script>
+
+
+    <script>
+        // function to sum two numbers
+        function sum(a, b) {
+            a = parseFloat(a);
+            b = parseFloat(b);
+
+            if (isNaN(a) || isNaN(b)) {
+                return "Invalid input";
+            }
+            return a + b;
+        }
+
+        console.log(sum("asdasd", "asdsdas"), sum(10, 20));  
+    </script>
+
+    <script>
+        //funtion to sum two numbers with missing parameters
+        function sum(a, b) {
+            console.log(`${a} and ${b} `);
+            return a + b;
+        }
+
+        console.log("Sum is" + sum(10)); // b is undefined
+
+        z = sum;
+        console.log(z(20, 30));
+
+    </script>
+
+
+
+    <script>
+        //callback function example
+        // a certain function takes ling time to execute and we want to know when it is done
+        // we uses callback function to notify us when it is done
+        function callbackExample(callback, data) {
+            // call the function stored in callback after long task is done
+            callback(addr);
+        }
+
+        function notifyMe(addr) {
+            // this will send me a email when the long task is done
+            console.log("Long task is done. Notify me at " + addr);
+        }
+
+        callbackExample(notifyMe, 34);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>object creations (prototype based) Object.create()
+    </div>
+    <script>
+        let person = {
+            greet() {
+                console.log("hello")
+            }
+        };
+
+        student = Object.create(person);
+
+        student.name = "MAX"
+
+        console.log(student.name);
+        student.greet();
+    </script>
+
+
+    <!-- factory function (no use of new)
+
+    <script>
+        function createPerson(name, age) {
+            return {
+                name: name,
+                age: age,
+            };
+        }
+
+        let p1 = createPerson("Sam", 20)
+        console.log(p1.name + " is " + p1.age);
+    </script> -->
+</body>
+
+</html>

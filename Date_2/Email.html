@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <style>
+        small {
+            font-family: monospace;
+            font-weight: 600;
+            color: darkred;
+        }
+    </style>
+
+    <h3>Enter an email</h3>
+
+    <p><input type="text" id="txtEmail"></p>
+
+    <div class="errors">
+        <small></small>
+    </div>
+
+    <button id="btnCheck">Check Email Address</button>
+
+    <script>
+        var txtEmail = document.querySelector("#txtEmail");
+        var errorMsg = document.querySelector(".errors small");
+
+        document.querySelector("#btnCheck").addEventListener("click", function () {
+            var txt = txtEmail.value;
+            txt = txt.trim(); // trim removes extra spaces
+            // Ex: abcd -> trim() -> "abcd"
+
+            if (txt.length < 5) { errorMsg.innerText = "Email address too small"; return; } var parts = txt.split("@");
+            // a#b.com -> a, b.com
+
+
+            if (parts.length <= 1) {
+                errorMsg.innerText = "Email does not contain a domain";
+                return;
+            }
+
+            if (parts[0].trim().length < 1) {
+                errorMsg.innerText = "The name part of email is too small";
+                return;
+            }
+
+            if (parts[1].trim().length < 1) {
+                errorMsg.innerText = "The domain part of email is too small";
+                return;
+            }
+
+            if (parts[1].indexOf(".") === -1) {
+                errorMsg.innerText = "Incomplete domain name";
+                return;
+            }
+
+            errorMsg.innerText = "";
+            alert("Email OK");
+        });
+    </script>
+
+
+
+</body>
+
+</html>

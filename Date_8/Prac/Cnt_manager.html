@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - Contact List Manager (CRUD)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #7f8c8d;
+        }
+
+        .info-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        ul,
+        ol {
+            margin: 10px 0;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .requirement {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .bonus {
+            background-color: #fff8e1;
+            border: 1px solid #ffeb3b;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>📋 Task: Contact List Manager (CRUD Application)</h1>
+
+    <div class="warning-box">
+        <strong>⚠️ IMPORTANT:</strong> This is a <strong>practice task</strong>. Try to do as much as possible on your
+        own.
+        If you feel some things cannot be done or are too challenging, don't worry - leave them for now.
+        We will cover those concepts later in class. The goal is to practice what you've learned so far! 💪
+    </div>
+
+    <div class="info-box">
+        <strong>⏱️ Estimated Time:</strong> 2-3 hours<br>
+        <strong>📂 File Name:</strong> Create a new HTML file named <code>contact-manager.html</code><br>
+        <strong>🎯 Difficulty:</strong> Beginner - Intermediate
+    </div>
+
+    <h2>📖 Project Description</h2>
+    <p>
+        Build a <strong>Contact List Manager</strong> web application that allows users to Create, Read, Update, and
+        Delete (CRUD) contacts.
+        This project will test your understanding of JavaScript fundamentals, DOM manipulation, form validation, and
+        event handling.
+    </p>
+
+    <h2>✅ Functional Requirements</h2>
+
+    <h3>1. Contact Information</h3>
+    <p>Each contact should have the following fields:</p>
+    <ul>
+        <li><strong>Name</strong> (Required)</li>
+        <li><strong>Email</strong> (Required)</li>
+        <li><strong>Phone Number</strong> (Required)</li>
+        <li><strong>City</strong> (Optional)</li>
+    </ul>
+
+    <h3>2. Core Features (CRUD Operations)</h3>
+
+    <div class="requirement">
+        <strong>CREATE - Add Contact</strong>
+        <ul>
+            <li>Create a form with input fields for Name, Email, Phone, and City</li>
+            <li>Add an "Add Contact" button</li>
+            <li>When clicked, validate all required fields</li>
+            <li>If validation passes, create a Contact object and add it to an array</li>
+            <li>Display the new contact in the contact list</li>
+            <li>Clear the form after successful addition</li>
+        </ul>
+    </div>
+
+    <div class="requirement">
+        <strong>READ - Display Contacts</strong>
+        <ul>
+            <li>Display all contacts in a list format</li>
+            <li>Show all contact information (Name, Email, Phone, City)</li>
+            <li>Display a message "No contacts yet" when the list is empty</li>
+            <li>Show the total number of contacts</li>
+        </ul>
+    </div>
+
+    <div class="requirement">
+        <strong>UPDATE - Edit Contact</strong>
+        <ul>
+            <li>Add an "Edit" button for each contact</li>
+            <li>When clicked, populate the form with the contact's current data</li>
+            <li>Change the form title to "Edit Contact"</li>
+            <li>Replace the "Add" button with an "Update" button</li>
+            <li>Add a "Cancel" button to abandon editing</li>
+            <li>When Update is clicked, validate and save changes</li>
+            <li>Visually highlight the contact being edited</li>
+        </ul>
+    </div>
+
+    <div class="requirement">
+        <strong>DELETE - Remove Contact</strong>
+        <ul>
+            <li>Add a "Delete" button for each contact</li>
+            <li>Ask for confirmation before deleting: "Are you sure you want to delete this contact?"</li>
+            <li>Remove the contact from the array and update the display</li>
+            <li>Update the total contact count</li>
+        </ul>
+    </div>
+
+    <h3>3. Additional Features</h3>
+
+    <div class="requirement">
+        <strong>SEARCH - Filter Contacts</strong>
+        <ul>
+            <li>Create a search input field</li>
+            <li>As the user types (keyup event), filter contacts</li>
+            <li>Search should work on Name, Email, or Phone fields</li>
+            <li>Search should be case-insensitive</li>
+            <li>Show all contacts when search is empty</li>
+        </ul>
+    </div>
+
+    <div class="requirement">
+        <strong>VALIDATION - Form Validation</strong>
+        <ul>
+            <li>Name must not be empty</li>
+            <li>Email must not be empty and should contain '@' symbol</li>
+            <li>Phone must not be empty</li>
+            <li>Show error messages for invalid fields</li>
+            <li>Add visual indicators (red border) for fields with errors</li>
+            <li>Prevent form submission if validation fails</li>
+        </ul>
+    </div>
+
+    <h2>🛠️ Technical Requirements</h2>
+
+    <div class="warning-box">
+        <strong>You MUST use the following concepts:</strong>
+        <ul>
+            <li>✓ <strong>Variables:</strong> Store contacts array, editing index, input values</li>
+            <li>✓ <strong>Classes:</strong> Create a Contact class with constructor</li>
+            <li>✓ <strong>Functions:</strong> Separate functions for add, update, delete, display, validate</li>
+            <li>✓ <strong>If/Else:</strong> Validation checks, conditional displays</li>
+            <li>✓ <strong>For Loops:</strong> Display all contacts, search through contacts</li>
+            <li>✓ <strong>querySelector:</strong> Get references to form inputs and buttons</li>
+            <li>✓ <strong>innerText/innerHTML:</strong> Update display with contact information</li>
+            <li>✓ <strong>.value:</strong> Get input values, set input values when editing</li>
+            <li>✓ <strong>classList:</strong> Add/remove classes for styling (error states, hidden elements)</li>
+            <li>✓ <strong>style property:</strong> Change CSS dynamically</li>
+            <li>✓ <strong>String Methods:</strong> .trim(), .toLowerCase(), .includes() for validation and search</li>
+            <li>✓ <strong>addEventListener:</strong> Handle button clicks and keyboard events</li>
+            <li>✓ <strong>Keyboard Events:</strong> keyup for search functionality</li>
+            <li>✓ <strong>Mouse Events:</strong> click events for buttons</li>
+        </ul>
+    </div>
+
+    <h2>📐 Suggested Structure</h2>
+
+    <h3>HTML Elements You'll Need:</h3>
+    <ul>
+        <li>Form with input fields (name, email, phone, city)</li>
+        <li>Buttons (Add Contact, Update Contact, Cancel, Edit, Delete)</li>
+        <li>A container to display the contact list</li>
+        <li>A search input field</li>
+        <li>An element to show total contact count</li>
+        <li>Elements to display error messages</li>
+    </ul>
+
+    <h3>JavaScript Functions to Create:</h3>
+    <ol>
+        <li><code>class Contact</code> - Constructor for contact objects</li>
+        <li><code>validateName()</code> - Validate name field</li>
+        <li><code>validateEmail()</code> - Validate email field</li>
+        <li><code>validatePhone()</code> - Validate phone field</li>
+        <li><code>validateForm()</code> - Validate entire form</li>
+        <li><code>addContact()</code> - Add new contact to array</li>
+        <li><code>displayContacts()</code> - Show all contacts on page</li>
+        <li><code>editContact(index)</code> - Load contact data into form</li>
+        <li><code>updateContact()</code> - Save edited contact</li>
+        <li><code>deleteContact(index)</code> - Remove contact from array</li>
+        <li><code>clearForm()</code> - Reset form to initial state</li>
+        <li><code>updateStats()</code> - Update total contact count</li>
+        <li><code>searchContacts()</code> - Filter and display matching contacts</li>
+    </ol>
+
+    <h2>💡 Implementation Tips</h2>
+    <ul>
+        <li>Start with the HTML structure - create all elements first</li>
+        <li>Add basic CSS to make it presentable (keep it simple!)</li>
+        <li>Create the Contact class first</li>
+        <li>Build one feature at a time: Add → Display → Delete → Edit → Search → Validation</li>
+        <li>Test each feature before moving to the next</li>
+        <li>Use an array to store all contacts</li>
+        <li>Use an index variable to track which contact is being edited</li>
+        <li>When building HTML for contacts, use a loop to create the structure</li>
+        <li>Use <code>confirm()</code> for delete confirmation</li>
+        <li>Remember to update the display after every operation</li>
+    </ul>
+
+    <h2>🎨 Design Guidelines</h2>
+    <div class="success-box">
+        <strong>Keep the CSS minimal but functional:</strong>
+        <ul>
+            <li>Use simple colors for buttons (green for add, blue for edit, red for delete)</li>
+            <li>Add padding and margins for spacing</li>
+            <li>Use borders to separate contact items</li>
+            <li>Red border for invalid inputs</li>
+            <li>Different background color when editing a contact</li>
+            <li>Hide/show elements using a <code>.hidden</code> class with <code>display: none</code></li>
+        </ul>
+    </div>
+
+    <h2>✨ Bonus Challenges</h2>
+    <p>If you complete the main task early, try these additional features:</p>
+
+    <div class="bonus">
+        <strong>1. Clear All Button</strong> - Add a button to delete all contacts with confirmation
+    </div>
+
+    <div class="bonus">
+        <strong>2. Real-time Validation</strong> - Show validation errors as user types (keyup events)
+    </div>
+
+    <div class="bonus">
+        <strong>3. Sort Contacts</strong> - Add a button to sort contacts alphabetically by name
+    </div>
+
+    <div class="bonus">
+        <strong>4. Hover Effects</strong> - Change contact card background on mouseenter/mouseleave
+    </div>
+
+    <div class="bonus">
+        <strong>5. Format Names</strong> - Convert first letter of each name to uppercase
+    </div>
+
+    <div class="bonus">
+        <strong>6. Local Storage</strong> - Save contacts to localStorage so they persist after page refresh
+    </div>
+
+    <div class="bonus">
+        <strong>7. Edit Counter</strong> - Track and display how many times each contact has been edited
+    </div>
+
+    <div class="bonus">
+        <strong>8. Favorites</strong> - Add ability to mark contacts as favorites with a star icon
+    </div>
+
+    <h2>🎯 Success Criteria</h2>
+    <p>Your application is complete when:</p>
+    <ul>
+        <li>✓ You can add a new contact with all fields</li>
+        <li>✓ All contacts are displayed in a list</li>
+        <li>✓ You can edit any contact and save changes</li>
+        <li>✓ You can delete any contact</li>
+        <li>✓ Search works and filters contacts in real-time</li>
+        <li>✓ Form validation prevents invalid entries</li>
+        <li>✓ Error messages appear for invalid fields</li>
+        <li>✓ Total contact count updates correctly</li>
+        <li>✓ The interface is clean and easy to use</li>
+    </ul>
+
+    <div class="info-box">
+        <strong>🚀 Getting Started:</strong>
+        <ol>
+            <li>Create a new file: <code>contact-manager.html</code></li>
+            <li>Set up the basic HTML structure</li>
+            <li>Add your CSS styles</li>
+            <li>Start writing JavaScript - begin with the Contact class</li>
+            <li>Build features one at a time</li>
+            <li>Test frequently in your browser</li>
+        </ol>
+    </div>
+
+    <p style="margin-top: 40px; text-align: center; color: #7f8c8d;">
+        <strong>Good luck! 🎉 Remember to test your code frequently and don't hesitate to experiment!</strong>
+    </p>
+</body>
+
+</html>

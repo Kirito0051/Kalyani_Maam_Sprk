@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        small {
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+
+    <h3> enter some text (dont enter numbers)</h3>
+    <input type="text" id="myInp" />
+    <small id="msg">No text entered</small>
+
+
+
+    <script>
+        var myInp = document.querySelector("#myInp");
+        myInp.addEventListener("input", (ev) => {
+            myInp.value = myInp.value.replace(/\d/g, '');
+        });
+        //regex
+        // \d -> matches any digit from 0-9
+        // g -> global flag -> replaces all occurences
+        // replace (/\d/g,'') -> replaces all digits with an empty string (" ")
+    </script>
+</body>
+
+</html>

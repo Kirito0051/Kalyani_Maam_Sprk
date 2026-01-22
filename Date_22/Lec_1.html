@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes in JavaScript</title>
+</head>
+
+<body>
+
+    <script>
+        // old way of creating a class in JS
+        // class is  a prototype (your own data type)
+
+        function Person(name = "", age = 0) {
+            this.name = name;
+            this.age = age;
+            this.print = () => (`${this.name}, ${this.age}`);
+        }
+        var p1 = new Person("Alice", 30);
+        console.log(`Name is ${p1.name} and age is ${p1.age}`); // Alice
+
+
+        // using print function we can directly print the name and age 
+        console.log(p1.print()); // Alice, 30
+    </script>
+
+    <script>
+        function circle(radius = 0) {
+            this.radius = radius;
+            this.area = () => (Math.PI * this.radius * this.radius);
+            this.circumference = () => (2 * Math.PI * this.radius);
+        }
+
+        var c1 = new circle(5);
+        console.log("Area is:" + c1.area()); // Area is 78.53981633974483
+        console.log(`Circumference is ${c1.circumference()}`); // Circumference is 31.41592653589793
+
+    </script>
+
+
+    <script>
+        //traditional way of creating class 
+        // this is similar to the pervious cirlce code 
+
+        class circle1 {
+            constructor(radius = 0) {
+                this.radius = radius;
+            }
+
+            area() {
+                return Math.PI * this.radius * this.radius;
+            }
+
+            circumference() {
+                return 2 * Math.PI * this.radius;
+            }
+        }
+        var a = new circle1(5);
+        a.radius = 10;
+        console.log("Area is " + a.area());
+        console.log("Circumference is " + a.circumference());
+
+        // ES 2022 feature
+
+        class circle2 {
+            #radius; // private field
+
+            constructor(radius = 0) {
+                this.#radius = radius;
+            }
+
+            area() { // #area() would be private method
+                return Math.PI * this.#radius * this.#radius;
+            }
+
+            circumference() {
+                return 2 * Math.PI * this.#radius;
+            }
+        }
+        var b = new circle2(3);
+        console.log("Area is " + b.area());
+        console.log("Circumference is " + b.circumference());
+    </script>
+
+
+</body>
+
+</html>

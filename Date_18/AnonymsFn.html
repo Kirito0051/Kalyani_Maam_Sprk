@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [235, 88, 77, 55, 65];
+
+        arr.forEach(function (num) {
+            if (num)
+                console.log(num);
+        });
+
+        arr.forEach(function (num, idx) {
+            if (num)
+                console.log(`${idx} : ${num}`)
+        });
+
+        arr.forEach(function (num, idx, o) {
+            o[idx] = num * 2;
+        });
+        console.log(arr.toString());
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .table-container {
+            overflow-y: scroll;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 4px;
+            padding: 20px;
+            width: 300px;
+        }
+    </style>
+
+    <h3>Enter a number</h3>
+    <input type="number" id="myNum">
+    <h3>Table till</h3>
+    <input type="number" id="till">
+    <hr>
+    <button id="btnPrint">Print Table</button>
+    <div class="table-container">
+        <div class="table-main">
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("#btnPrint").addEventListener("click", function () {
+            var num = parseInt(document.querySelector("#myNum").value);
+            var till = parseInt(document.querySelector("#till").value);
+            var tableMain = document.querySelector(".table-main");
+            tableMain.innerHTML = "";
+            if (isNaN(num) || isNaN(till)) return;
+            for (var i = 1; i <= till; i++) {
+                var p = document.createElement("p");
+                p.innerText = `${num} x ${i} = ${num * i}`;
+                tableMain.appendChild(p);
+            }
+        });
+    </script>
+</body>
+
+</html>

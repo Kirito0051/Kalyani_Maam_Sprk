@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var nums = [1, 2, 3, 4, 5, 6];
+        console.log(nums);
+
+        //array and string methods
+
+        console.log(nums.toString());
+
+        nums.push(7);
+        console.log("After pushing 7 into nums" + nums.toString());
+
+        nums.pop();
+        console.log("After popping from nums" + nums.toString());
+
+        nums[3] = 65;
+        console.log("After changing 3th element to 65: " + nums.toString());
+
+
+        console.log("Number of items in the array: " + nums.length);
+
+        // manual printing
+        for (var i = 0; i < nums.length; i++) {
+            console.log(nums[i]);
+        }
+
+        // any loop (finding index)
+        console.log("Index of 65 in the array is: " + nums.indexOf(65));
+
+        // delete 2 items from the 3rd position
+        nums.splice(3, 2);
+        console.log("Removing 2 items from 3rd position: " + nums.toString());
+
+        // insert items in the 3rd position
+        nums.splice(3, 0, 45, 65, 22, 5);
+        console.log("Insert items in the 3rd position: " + nums.toString());
+
+    </script>
+</body>
+
+</html>

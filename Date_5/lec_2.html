@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        small {
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+
+    <h3> enter some text (dont enter numbers)</h3>
+    <input type="text" id="myInp" />
+    <small id="msg">No text entered</small>
+
+    <script>
+
+        /*
+              What triggers the input event?
+              The input event fires when the value changes due to:
+              Typing on the keyboard
+              Pasting with mouse or keyboard
+              Cutting text
+              Drag & drop
+              Autocomplete / autofill
+              Voice input
+              Mobile keyboards
+              */
+
+
+        var myInp = document.querySelector("#myInp");
+        myInp.addEventListener("keydown", (ev) => {
+            if (ev.key >= '0' && ev.key <= '9') {
+                ev.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>

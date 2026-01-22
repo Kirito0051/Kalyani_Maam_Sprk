@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+
+    <h2 id="marks"></h2>
+    <h2 id="average"></h2>
+    <h2 id="highest"></h2>
+    <h2 id="lowest"></h2>
+
+
+    <script>
+        // let marks = [30, 40, 45, 50, 70, 22, 33, 7];
+
+        // console.log("marks are : " + marks);
+        // console.log("marks at 2 index " + marks[2])
+        // console.log("length of the array " + marks.length)
+
+        // marks[2] = 10;
+        // console.log("changed marks are : " + marks)
+
+        // for (i = 0; i < 3; i++) {
+        //     console.log("marks till index 3 is : " + marks[i]);
+        // }
+        // for (let num in marks) {
+        //     console.log("marks in index num is : " + marks[num]);
+        // }
+
+        // marks.push(10);
+        // console.log(marks)
+
+        // marks.pop();
+        // console.log(marks)
+
+        // marks.unshift(50)
+        // console.log(marks)
+
+        // marks.shift();
+        // console.log(marks)
+
+        // console.log(marks.includes(90))
+
+        // console.log(marks.indexOf(50))
+
+        // function sumarray(arr) {
+        //     let sum = 0
+        //     for (let num of arr) {
+        //         sum += num
+        //     }
+
+        //     return sum
+        // }
+
+        // console.log(sumarray(marks))
+
+        // let addmarks = marks.map(n => n + 2)
+        // console.log(addmarks)
+
+        // let mulmarks = marks.map(n => n * n)
+        // console.log(mulmarks)
+
+        // let even = marks.filter(n => n % 2 === 0)
+        // console.log(even)
+
+        // let odd = marks.filter(n => n % 2 != 0)
+        // console.log(odd)
+
+
+        //array 
+        // need an array to store marks
+        // total marks
+        // average marks
+        // highest and lowest marks
+        // output in html
+
+        let marks = [30, 40, 45, 50, 70, 22, 33, 7];
+
+        function sumarray(arr) {
+            let sum = 0
+            for (let num of arr) {
+                sum += num
+            }
+
+            return sum
+        }
+
+        let averageMarks = sumarray(marks) / marks.length;
+
+        let highestMarks = Math.max(...marks);
+        let lowestMarks = Math.min(...marks);
+
+        document.getElementById("marks").innerHTML = sumarray(marks)
+        document.getElementById("average").innerHTML = averageMarks
+        document.getElementById("highest").innerHTML = highestMarks
+        document.getElementById("lowest").innerHTML = lowestMarks
+
+    </script>
+
+</body>
+
+</html>

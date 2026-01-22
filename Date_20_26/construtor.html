@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+
+<body>
+
+
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            ageCatergory() {
+                this.age > 18
+                console.log(this.name + " is an adult")
+            }
+
+        }
+        let p = new Person("Max", 20);
+        p.ageCatergory();
+    </script>
+
+
+
+
+
+
+    <!-- <h2 id="output"></h2>
+
+    <script>
+        function person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        let p = new person("Sam", 20);
+        console.log(p.name)
+        document.getElementById("output").innerHTML = p.age -->
+    </script>
+
+</body>
+
+</html>

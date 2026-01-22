@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--create  a input tag which accepts a name 
+    when a "check Name " button is clicked 
+    it checks for errors (name blank or less than 10 letters)-->
+    <h4>Enter the name :</h4> <input type="text" id="nameInput" placeholder="Enter your name">
+    <br><br>
+    <button id="checkNameBtn">Check Name</button>
+    <p id="message"></p>
+    <script>
+        document.querySelector("#checkNameBtn").addEventListener("click", () => {
+            var name = document.querySelector("#nameInput").value.trim();
+            var message = document.querySelector("#message")
+            if (name === "") {
+                alert("Error: Name cannot be blank.")
+            } else if (name.length < 10) {
+                alert("Error: Name must be at least 10 letters long.")
+            } else {
+                alert("Name is valid.")
+            }
+        });
+    </script>
+
+</body>
+
+</html>

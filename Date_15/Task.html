@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // area and perimeter of rectangle
+
+        const length = parseFloat(prompt("Length: "));
+        const width = parseFloat(prompt("Width: "));
+        const area = length * width;
+        const perimeter = 2 * (length + width);
+        console.log(`area is ${area} perimeter is ${perimeter} `);
+
+    </script>
+
+    <script>
+
+        // pass or fail
+        var marks = parseFloat(input("Enter your marks: "));
+        if (marks >= 35) {
+            console.log("PASSED");
+        } else {
+            console.log("FAILED");
+        }
+    </script>
+
+    <script>
+        // biggest of 3 numbers
+
+        var Num1 = parseFloat(prompt("Num 1: "));
+        var Num2 = parseFloat(prompt("Num 2: "));
+        var Num3 = parseFloat(prompt("Num 3: "));
+
+        // console.log(`biggest number is ${Math.max(Num1, Num2, Num3)}`);
+
+
+
+        let biggest;
+
+        if (Num1 >= Num2 || Num1 >= Num3) {
+            biggest = Num1;
+        } else if (Num2 >= Num1 || Num2 >= Num3) {
+            biggest = Num2;
+        } else {
+            biggest = Num3;
+        }
+        console.log(`biggest number is ${biggest}`);
+
+    </script>
+</body>
+
+</html>
