@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="username">
+    <button onclick="checkUserName()">submit</button>
+    <p id="output"></p>
+    <script>
+        let name = "   sam      ";
+        let city = 'Mumbai';
+
+        console.log(name)
+        console.log(city)
+
+        console.log(name.length)
+        console.log(name[0])
+        console.log(name[1])
+        console.log(name[2])
+
+        let str = "MAX"
+        for (let ch = 0; ch < name.length; ch++) { console.log(name[ch]); }
+
+        name[0] = "M"
+        console.log(name)
+
+        console.log(name.toUpperCase());
+
+        console.log(str.toLowerCase());
+
+        console.log(name.trim());
+
+
+        let greeting = "HI good morning how are you ?"
+
+        let words = greeting.split(" ")
+
+        console.log(words)
+
+        console.log(greeting.slice(3, 15));
+
+        console.log(greeting.substring(3, 15));
+
+        console.log(greeting.replace("morning", "evening"));
+
+        console.log(greeting.includes("HOW"))
+
+        console.log(greeting.endsWith("?"))
+
+        console.log(greeting.startsWith("hi"))
+
+        console.log(str + " " + greeting);
+
+        console.log("my name is ${name}")
+
+        console.log(name === str);
+
+        console.log(words[2])
+
+        //user name validation : 5 chara
+
+        // let username = 
+
+
+        function validate(username) {
+            if (username.trim().length < 5) {
+                return ("user name too short")
+            }
+            else {
+                return ("valid user name")
+            }
+
+        }
+
+        function checkUserName() {
+
+            let value1 = document.getElementById("username").value
+            let message = validate(value1)
+
+            document.getElementById("output").textContent = message
+        }
+
+        // console.log(validate("Max"));
+
+
+
+
+    </script>
+</body>
+
+</html>
