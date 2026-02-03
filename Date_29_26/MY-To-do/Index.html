@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>To-Do Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <!-- LEFT -->
+        <div class="sidebar">
+            <h1>Hey</h1>
+            <p>Welcome back to the workspace</p>
+
+            <div class="search">
+                <input type="text" placeholder="Search task or project..." />
+            </div>
+
+            <div class="projects">
+                <button class="project orange" onclick="selectProject('UI')">UI</button>
+                <button class="project pink" onclick="selectProject('HTML')">HTML</button>
+                <button class="project pink" onclick="selectProject('CSS')">CSS</button>
+                <button class="project pink" onclick="selectProject('JS')">JS</button>
+                <button class="project orange" onclick="selectProject('React')">React</button>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="content">
+            <h2>To-Do Dashboard </h2>
+            <p class="subtitle">Project task overview</p>
+
+            <div class="section today">
+                <h3>Today</h3>
+            </div>
+
+
+            <div class="section upcoming">
+                <h3>Upcoming</h3>
+
+                <div class="task">
+                    <div class="task-left">
+                        <input type="checkbox" />
+                        <span>Workflow discussion</span>
+                    </div>
+                    <span class="status waiting">Waiting</span>
+                </div>
+            </div>
+
+            <button class="clear-btn" onclick="clearAllTasks()">-</button>
+
+            <button class="add-btn" onclick="addTask()">+</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
