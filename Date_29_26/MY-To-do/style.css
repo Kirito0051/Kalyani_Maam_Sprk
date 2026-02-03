@@ -7,17 +7,23 @@
 }
 
 body {
-    background: #e9ecf3;
+    margin: 0;
     padding: 30px;
+    background: #e9ecf3;
+    height: calc(100vh - 60px);
+    /* 100vh minus body padding top + bottom */
+    overflow: hidden;
 }
 
 .app {
     display: flex;
-    height: 90vh;
+    height: 100%;
+    /* full height of body */
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
+
 
 /* LEFT PANEL */
 .sidebar {
@@ -99,8 +105,23 @@ body {
     width: 65%;
     background: #fff;
     padding: 35px;
+    display: flex;
+    flex-direction: column;
     position: relative;
+    height: 100%;
+    /* fill parent .app height */
 }
+
+.task-container {
+    flex: 1;
+    /* take remaining height */
+    overflow-y: auto;
+    /* scroll inside this container */
+    margin-top: 20px;
+    padding-right: 10px;
+    /* space for scrollbar */
+}
+
 
 .subtitle {
     opacity: 0.6;
@@ -234,4 +255,50 @@ body {
 .delete-btn:hover img {
     opacity: 1;
     transform: scale(1.15);
+}
+
+/* Make content a flex column */
+.content {
+    width: 65%;
+    background: #fff;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+/* Header + subtitle occupy natural space, tasks scroll */
+.task-container {
+    flex: 1;
+    /* fill remaining vertical space */
+    overflow-y: auto;
+    /* scroll only this container */
+    margin-top: 20px;
+    padding-right: 10px;
+    /* space for scrollbar */
+}
+
+/* Custom scrollbar */
+.task-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.task-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.task-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff9a9e, #fad0c4);
+    border-radius: 10px;
+}
+
+.task-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff758c, #ff7eb3);
+}
+
+/* Firefox scrollbar */
+.task-container {
+    scrollbar-width: thin;
+    scrollbar-color: #a29e9e transparent;
 }

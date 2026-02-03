@@ -30,33 +30,50 @@
 
         <!-- RIGHT -->
         <div class="content">
-            <h2>To-Do Dashboard </h2>
+            <h2>To-Do Dashboard</h2>
             <p class="subtitle">Project task overview</p>
 
-            <div class="section today">
-                <h3>Today</h3>
-            </div>
+            <!-- Scrollable tasks -->
+            <div class="task-container">
+                <div class="section today">
+                    <h3>Today</h3>
+                </div>
 
+                <div class="section upcoming">
+                    <h3>Upcoming</h3>
 
-            <div class="section upcoming">
-                <h3>Upcoming</h3>
-
-                <div class="task">
-                    <div class="task-left">
-                        <input type="checkbox" />
-                        <span>Workflow discussion</span>
+                    <div class="task">
+                        <div class="task-left">
+                            <input type="checkbox" />
+                            <span>Workflow discussion</span>
+                        </div>
+                        <span class="status waiting">Waiting</span>
                     </div>
-                    <span class="status waiting">Waiting</span>
+
+                    <!-- Repeat tasks to test scroll -->
+                    <div class="task">
+                        <div class="task-left">
+                            <input type="checkbox" />
+                            <span>Another Task</span>
+                        </div>
+                        <span class="status progress">Progress</span>
+                    </div>
+                    <div class="task">
+                        <div class="task-left">
+                            <input type="checkbox" />
+                            <span>Another Task</span>
+                        </div>
+                        <span class="status approved">Approved</span>
+                    </div>
                 </div>
             </div>
 
             <button class="clear-btn" onclick="clearAllTasks()">-</button>
-
             <button class="add-btn" onclick="addTask()">+</button>
         </div>
-    </div>
 
-    <script src="script.js"></script>
+
+        <script src="script.js"></script>
 </body>
 
 </html>
