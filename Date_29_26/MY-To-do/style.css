@@ -188,7 +188,7 @@ body {
 .add-btn {
     position: absolute;
     right: 30px;
-    bottom: 30px;
+    top: 30px;
     width: 55px;
     height: 55px;
     border-radius: 50%;
@@ -207,7 +207,7 @@ body {
 .clear-btn {
     position: absolute;
     right: 30px;
-    bottom: 100px;
+    top: 100px;
     width: 55px;
     height: 55px;
     border-radius: 50%;
@@ -305,4 +305,32 @@ body {
 .task-container {
     scrollbar-width: thin;
     scrollbar-color: #a29e9e transparent;
+}
+
+#sectionSelect {
+    position: absolute;
+    right: 100px;
+    top: 107px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: none;
+    background: #8b5cf6;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(59, 246, 174, 0.4);
+}
+
+#projectSelect {
+    position: absolute;
+    right: 100px;
+    top: 37px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: none;
+    background: #ef4444;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
 }

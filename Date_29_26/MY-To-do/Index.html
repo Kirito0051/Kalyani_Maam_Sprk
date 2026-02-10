@@ -25,6 +25,8 @@
                 <button class="project pink" onclick="selectProject('CSS')">CSS</button>
                 <button class="project purple" onclick="selectProject('JS')">JS</button>
                 <button class="project green" onclick="selectProject('React')">React</button>
+                <button class="project" onclick="selectProject('ALL')">ALL</button>
+
             </div>
         </div>
 
@@ -41,35 +43,26 @@
 
                 <div class="section upcoming">
                     <h3>Upcoming</h3>
-
-                    <div class="task">
-                        <div class="task-left">
-                            <input type="checkbox" />
-                            <span>Workflow discussion</span>
-                        </div>
-                        <span class="status waiting">Waiting</span>
-                    </div>
-
-                    <!-- Repeat tasks to test scroll -->
-                    <div class="task">
-                        <div class="task-left">
-                            <input type="checkbox" />
-                            <span>Another Task</span>
-                        </div>
-                        <span class="status progress">Progress</span>
-                    </div>
-                    <div class="task">
-                        <div class="task-left">
-                            <input type="checkbox" />
-                            <span>Another Task</span>
-                        </div>
-                        <span class="status approved">Approved</span>
-                    </div>
                 </div>
+
             </div>
 
             <button class="clear-btn" onclick="clearAllTasks()">-</button>
             <button class="add-btn" onclick="addTask()">+</button>
+
+            <select id="sectionSelect">
+                <option value="today">Today</option>
+                <option value="upcoming">Upcoming</option>
+            </select>
+
+            <select id="projectSelect">
+                <option value="UI">UI</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JS">JS</option>
+                <option value="React">React</option>
+            </select>
+
         </div>
 
 
