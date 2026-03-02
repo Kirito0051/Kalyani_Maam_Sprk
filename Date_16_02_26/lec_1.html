@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //objects recap
+        let person = {
+            name: "Kalyani",
+            age: 25,
+            greet: function () {
+                console.log("Hello " + this.name);
+            }
+        };
+
+        person.greet();
+
+
+        //Constructor Functions (Old OOP Style)
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        let p1 = new Person("Alice", 22);
+        let p2 = new Person("Bob", 25);
+
+        console.log(p1.name); // Alice
+
+
+
+        //memory waste problem
+        function Person(name) {
+            this.name = name;
+            this.greet = function () {
+                console.log("Hello " + this.name);
+            };
+        }
+
+
+        //Solution: Prototyping
+        function Person(name) {
+            this.name = name;
+        }
+
+        Person.prototype.greet = function () {
+            console.log("Hello out with prototype " + this.name);
+        };
+
+        let p3 = new Person("Alice");
+        let p4 = new Person("Bob");
+
+        p3.greet(); // Hello Alice
+        p4.greet(); // Hello Bob
+
+
+        // ES6 classes
+        class PersonClass {
+            constructor(name) {
+                this.name = name;
+            }
+
+            greet() {
+                console.log("Hello from ES6 class " + this.name);
+            }
+        }
+        let p5 = new PersonClass("Charlie");
+        p5.greet(); // Hello from ES6 class Charlie
+
+        //classes are similar to prototype functions
+
+        //inheritance
+        class student extends PersonClass {
+            constructor(name, age, grade) {
+                super(name, age);
+                this.grade = grade;
+            }
+
+            study() {
+                console.log(this.name + " is studying. is a inheritance of person class");
+            }
+        }
+        let s1 = new student("Rahul", 20, "A");
+
+        s1.greet(); // Hello from ES6 class Rahul
+        s1.study(); // Rahul is studying. is a inheritance of person class
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Product Inventory System</h1>
+    <div class="controls">
+        <!-- inputs here -->
+        <input type="text" id="search" placeholder="Search by name">
+
+        <select id="sort">
+            <option value="">Sort By</option>
+            <option value="priceLow">Price: Low to High</option>
+            <option value="priceHigh">Price: High to Low</option>
+            <option value="name">Name</option>
+        </select>
+
+        <input type="number" id="maxPrice" placeholder="Max Price">
+
+        <button id="filterBtn">Filter</button>
+    </div>
+    <div id="productContainer"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -82,15 +82,16 @@ function renderTasks(tasks) {
     taskEl.className = "task";
 
     taskEl.innerHTML = `
-      <div class="task-left">
-        <input type="checkbox" ${task.done ? "checked" : ""}>
-        <span>${task.text}</span>
-      </div>
-      <div style="display:flex; gap:10px; align-items:center;">
-        <span class="status ${getStatusClass(task.status)}">${task.status}</span>
-        <button class="delete-btn">🗑</button>
-      </div>
-    `;
+        <div class="task-left">
+          <input type="checkbox" ${task.done ? "checked" : ""}>
+          <span>${task.text}</span>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <span class="status ${getStatusClass(task.status)}">${task.status}</span>
+          <button class="delete-btn">
+          <img src="img/trash.png" alt="Delete"></button>
+        </div>
+      `;
 
     taskEl.querySelector("input").addEventListener("change", (e) => {
       task.done = e.target.checked;
