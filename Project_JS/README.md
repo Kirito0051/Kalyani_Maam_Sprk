@@ -17,10 +17,10 @@ This is a frontend web project built using HTML, CSS, and JavaScript.
 ## Author: 
 Anas Altaf Shaikh
 
-## Project Preview
+## 📸 Project Preview
 
-![Product Inventory System](preview_1.png)
+![Product Inventory System](Preview_img/Preview_1.png)
 
-![Product Inventory System](preview_2.png)
+![Product Inventory System](Preview_img/Preview_2.png)
 
-![Product Inventory System](preview_3.png)
+![Product Inventory System](Preview_img/Preview_3.png)
