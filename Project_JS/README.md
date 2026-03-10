@@ -1,6 +1,6 @@
 # Product Inventory System
 
-This is a frontend web project built using HTML, CSS, and JavaScript.
+A simple product inventory web application that fetches data from FakeStore API and displays products with search, filtering, and sorting functionality.
 
 ## Features:
 
