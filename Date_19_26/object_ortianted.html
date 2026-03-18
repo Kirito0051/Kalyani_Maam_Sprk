@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops</title>
+</head>
+
+<body>
+    <h2>
+        object creations
+    </h2>
+
+    <h2 id="output"></h2>
+
+    <script>
+        let student = {
+            name: "Max",
+            age: 20,
+            grade: "A",
+
+            study: function () {
+                return this.name + " studes well";
+            },
+
+            date: function () {
+                console.log(this.name + " is " + this.age + " years old ");
+            }
+        };
+
+
+        student.date();
+        student.study();
+        console.log(student.name);
+        document.getElementById("output").innerHTML = student.study();
+        document.getElementById("output").innerHTML = student.name;
+    </script>
+
+</body>
+
+</html>

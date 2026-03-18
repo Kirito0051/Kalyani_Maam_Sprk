@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- wap to ask user the size of array and accept them in the array -->
+    <script>
+        var size = parseInt(prompt("Enter a size of the array: "));
+        var array1 = [];
+        for (var i = 0; i < size; i++) {
+            var value = parseFloat(prompt(`Enter a the ${i + 1} element of the array`));
+            array1.push(value);
+        }
+
+        console.log(array1.toString());
+
+    </script>
+</body>
+
+</html>

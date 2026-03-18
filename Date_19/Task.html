@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Management System</title>
+</head>
+
+<body>
+
+    <script>
+        // Initial Array
+        // Display Array
+        // Add Element
+        // Remove Element
+        // Edit Element
+
+        // Search Element
+        // Sort Array
+        // Reverse Array
+        // Calling all functions
+    </script>
+
+    <script>
+        // Initial Array
+        var arr = [2, 4, 3, 6, 5];
+
+        // Display Array
+        function displayArray() {
+            console.log("Array:", arr.toString());
+        }
+
+        // Add Element
+        function addElement(element) {
+            arr.push(element);
+            console.log(element + " added");
+        }
+
+        // Remove Element
+        function removeElement(element) {
+            let index = arr.indexOf(element);
+            if (index !== -1) {
+                arr.splice(index, 1);
+                console.log(element + " removed");
+            } else {
+                console.log(element + " not found");
+            }
+        }
+
+        // Edit Element
+        function editElement(oldValue, newValue) {
+            let index = arr.indexOf(oldValue);
+            if (index !== -1) {
+                arr[index] = newValue;
+                console.log(oldValue + " replaced with " + newValue);
+            } else {
+                console.log(oldValue + " not found");
+            }
+        }
+
+        // Search Element
+        function searchElement(element) {
+            let index = arr.indexOf(element);
+            if (index !== -1) {
+                console.log(element + " found at index " + index);
+            } else {
+                console.log(element + " not found");
+            }
+        }
+
+        // Sort Array
+        function sortArray() {
+            arr.sort(function (a, b) {
+                return a - b; // Numeric sort
+            });
+            console.log("Array sorted");
+        }
+
+        // Reverse Array
+        function reverseArray() {
+            arr.reverse();
+            console.log("Array reversed");
+        }
+
+        // Calling all functions
+        displayArray();
+
+        addElement(10);
+        displayArray();
+
+        removeElement(4);
+        displayArray();
+
+        editElement(3, 8);
+        displayArray();
+
+        searchElement(6);
+        searchElement(100);
+
+        sortArray();
+        displayArray();
+
+        reverseArray();
+        displayArray();
+    </script>
+
+</body>
+
+</html>

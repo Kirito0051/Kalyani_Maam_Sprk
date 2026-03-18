@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var add = (a, b) => {
+            return a + b;
+        }
+
+        var sub = (a, b) => a - b;
+
+
+        var mul = (a, b) => {
+            a * b;
+        }
+        /*
+            this will give an error (you have to write return or else it will give undefined)
+            you can skip the return only when
+            1) the function contains one line code
+            2) you have not used curly braces
+        */
+
+        var multiply = (a, b) => {
+            return a * b;
+        }
+
+        console.log(add(3, 4));
+        console.log(sub(3, 4));
+        console.log(mul(3, 4));
+        console.log(multiply(3, 4));
+    </script>
+</body>
+
+</html>

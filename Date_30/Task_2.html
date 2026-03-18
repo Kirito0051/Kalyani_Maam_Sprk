@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<style>
+    .container {
+        margin: 30px;
+        font-size: 25px;
+    }
+
+    input {
+        font-size: 15px;
+        padding: 5px 10px;
+
+    }
+</style>
+
+<body>
+
+    <!-- task is to change the type of list
+  when i enter the type in the input such as circle, disc, square and press enter and the li should change -->
+
+
+
+    <div class="container">
+        <ul type="square">
+            <li>some item</li>
+            <li>some other item</li>
+            <li>another item</li>
+        </ul>
+
+        <input type="text">
+
+        <!-- <button id="task">Change Type</button> -->
+
+
+        <h2>this is currently a <span id="typeDisplay">square</span></h2>
+    </div>
+
+
+    <script>
+        var list = document.querySelector("ul");
+        var typeDisplay = document.querySelector("#typeDisplay");
+        var input = document.querySelector("input");
+
+
+        input.addEventListener("keyup", function (event) {
+            if (event.key === "Enter") {
+                list.setAttribute("type", input.value);
+                typeDisplay.innerText = list.getAttribute("type");
+                input.value = "";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

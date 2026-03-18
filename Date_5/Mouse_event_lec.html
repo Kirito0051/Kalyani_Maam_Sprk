@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        #box {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            background-color: white;
+        }
+    </style>
+
+    <div id="box">
+
+    </div>
+    <p id="msg" style="color: black; font-weight: bold; font-size: 15px;">X : 0 Y : 0</p>
+
+    <script>
+        var box = document.querySelector("#box");
+        var msg = document.querySelector("#msg");
+
+        box.addEventListener("mouseenter", (ev) => {
+            box.style.backgroundColor = "red"; // Fixed invalid color name
+        });
+        box.addEventListener("mouseleave", (ev) => {
+            box.style.backgroundColor = "white";
+        });
+        box.addEventListener("mousemove", (ev) => {
+            msg.innerText = `X: ${ev.offsetX} , Y: ${ev.offsetY}`; // Fixed incorrect property name
+        })
+
+
+
+        /*The box is located 8px below and to the left the page viewport
+    Lets say the mouse entered at the point x: 4px, y: 200px as per the box
+    diemensions
+    1) LayerX: 13 (8px margin + 1px border + 4px box point)
+    2) LayerY: 209 (8px margin 1px border: 200px height of the box)
+    1) OffsetX: 4px
+    2) OffsetY:200px
+    :
+    1) PageX: 13
+    2) PageY: 209-> Lets say the box is located at the bootm of the page after scolling 2 screens Pagey may be around 2000+
+    1) ScreenX: Your cordinates as per the physical screen -> this may inflate if you have a multi monitor setup
+    2) ScreenY:
+    */
+
+    </script>
+
+
+</body>
+
+</html>

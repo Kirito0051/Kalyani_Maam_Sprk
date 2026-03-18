@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMG using JS in window.addevenetlisener</title>
+</head>
+
+<body>
+
+    <style>
+        img {
+            width: 60%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <h3>First image</h3>
+    <img src="https://picsum.photos/1200/600" alt=" Large landscape image">
+
+    <h3>Second image</h3>
+    <img src="https://picsum.photos/1200/700" alt=" Another large image">
+
+    <h3>Third image</h3>
+    <img src="https://picsum.photos/1200/800" alt=" Third large image">
+
+
+    <script>
+        function gettime() {
+            var tm = new Date();
+            return tm.toLocaleTimeString() + ":" + tm.getMilliseconds();
+
+        }
+
+        window.addEventListener("DOMContentLoaded", function () {
+            console.log("DOM fully loaded and parsed at ");
+            console.log(gettime());
+        });
+        window.addEventListener("beforeunload", function (ev) {
+            ev.preventDefault();
+            console.log("Document is unloading at ");
+            ev.returnValue = "";
+        });
+        window.addEventListener("load", function () {
+            console.log("all the img , script ,css , html and js files have been loaded at ");
+            console.log(gettime());
+        });
+
+        window.addEventListener("resize", function (ev) {
+            console.log(`Window resized to ${ev.target.innerWidth} x ${ev.target.innerHeight}`);
+        });
+
+        window.addEventListener("scroll", function (ev) {
+            console.log(`Window scrolled top: ${document.documentElement.scrollTop | document.body.scrollTop}`);
+        });
+
+    </script>
+
+</body>
+
+</html>

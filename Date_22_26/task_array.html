@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+
+    <h1>Marks Analysis</h1>
+    <div id="output"></div>
+
+    <script>
+
+        // need an array to store marks
+        // total marks
+        // average marks
+        // highest and lowest marks
+        // output in html
+        let marks = [30, 40, 45, 50, 70, 22, 33, 7];
+
+        let totalMarks = marks.reduce((sum, mark) => sum + mark, 0);
+
+        let averageMarks = totalMarks / marks.length;
+
+        let highestMarks = Math.max(...marks);
+        let lowestMarks = Math.min(...marks);
+
+
+        let outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = `
+            <p>Total Marks: ${totalMarks}</p>
+            <p>Average Marks: ${averageMarks.toFixed(2)}</p>
+            <p>Highest Marks: ${highestMarks}</p>
+            <p>Lowest Marks: ${lowestMarks}</p>
+        `;
+
+    </script>
+
+</body>
+
+</html>

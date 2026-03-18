@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 30px;
+            font-size: 25px;
+        }
+
+        button {
+            font-size: 15px;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul type="square">
+            <li>some item</li>
+            <li>some other item</li>
+            <li>another item</li>
+        </ul>
+        <div>
+            <button id="square">square</button>
+            <button id="disc">disc</button>
+            <button id="circle">circle</button>
+        </div>
+        <br>
+
+        <h2>this is currently a <span id="typeDisplay">square</span></h2>
+    </div>
+    <script>
+        var list = document.querySelector("ul");
+        var typeDisplay = document.querySelector("#typeDisplay");
+
+        document.querySelector("#square").addEventListener("click", function () {
+            list.setAttribute("type", "square");
+            typeDisplay.innerText = list.getAttribute("type");
+        });
+        document.querySelector("#disc").addEventListener("click", function () {
+            list.setAttribute("type", "disc");
+            typeDisplay.innerText = list.getAttribute("type");
+
+        });
+        document.querySelector("#circle").addEventListener("click", function () {
+            list.setAttribute("type", "circle");
+            typeDisplay.innerText = list.getAttribute("type");
+        });
+    </script>
+</body>
+
+</html>

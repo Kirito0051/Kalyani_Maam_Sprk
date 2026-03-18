@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <Script>
+        class Bill {
+            #amt
+            #discPer
+            constructor(amount = 1, discount = 0) {
+                this.setData(amount, discount);
+            }
+
+            // Get , setter method
+            get amount() {
+                return this.#amt;
+            }
+            set amount(val) {
+                if (val <= 0) {
+                    throw new Error("Amount cannot be negative");
+                }
+                this.#amt = val;
+            }
+
+            get discountPercentage() {
+                return this.#discPer;
+            }
+            set discountPercentage(val) {
+                if (val < 0 || val > 100) {
+                    throw new Error("Discount must be between 0 and 100");
+                }
+                this.#discPer = val;
+            }
+
+            setData(amt = 0, discPer = 0) {
+                this.amount = amt;
+                this.discountPercentage = discPer;
+            }
+
+            calcDiscount() {
+                return (this.#amt * this.#discPer) / 100;
+            }
+
+            calctotal() {
+                return this.#amt - this.calcDiscount();
+            }
+        }
+
+        var b = new Bill();
+        b.amount = 1000;
+        b.discountPercentage = 10;
+
+        console.log(b.calctotal());
+
+
+    </Script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //class animal
+        // class mammal extends animal
+        // class dog extends mammal 
+
+        class Animal {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            eat() {
+                console.log(this.name + " is eating. is an animal");
+                console.log(this.age + " year old. is an animal");
+            }
+        }
+        a1 = new Animal("Buddy", 3);
+
+        class Mammal extends Animal {
+            constructor(name, age, hasFur) {
+                super(name, age);
+                this.hasFur = hasFur;
+            }
+
+            fur() {
+                console.log(this.name + " is furry. is a mammal exteding animal");
+                console.log(this.hasFur + " fur. is a mammal exteding animal");
+            }
+        }
+
+        class Dog extends Mammal {
+            constructor(name, age, hasFur, barks) {
+                super(name, age, hasFur);
+                this.barks = barks;
+            }
+
+            bark() {
+                console.log(this.name + " says " + this.barks + "! is a dog extending mammal");
+            }
+        }
+
+        let myDog = new Dog("Golden Retriever", 10, 'golden', 'Woof');
+
+        myDog.eat(); // Buddy is eating.
+        myDog.fur(); // Buddy is walking.
+        myDog.bark(); // Buddy says Woof!
+
+
+    </script>
+
+
+</body>
+
+</html>

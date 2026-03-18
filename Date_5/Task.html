@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- create a div with samll size text inside it 
+ when u move the mouse hoverin gover it the text size increases -->
+    <!-- also add a wheel -->
+
+
+
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            font-size: 15px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+
+    <div id="box">
+        Hover over me!
+    </div>
+
+    <script>
+        var box = document.querySelector("#box");
+
+        box.addEventListener("mouseenter", (ev) => {
+            box.style.fontSize = "30px";
+        });
+        box.addEventListener("mouseleave", (ev) => {
+            box.style.fontSize = "15px";
+        });
+
+    </script>
+
+</body>
+
+</html>

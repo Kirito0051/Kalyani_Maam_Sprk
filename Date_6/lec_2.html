@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            left: 0;
+            justify-content: center;
+            box-shadow: 0px 3px 2px grey;
+            background-color: white;
+        }
+
+        nav ul {
+            width: auto;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        nav ul li {
+            text-transform: capitalize;
+            color: black;
+        }
+
+        .padded {
+            padding: 20px 0;
+        }
+
+        #First {
+            margin-top: 100px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <nav>
+        <ul id="myUL" class="padded">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <h3 id="First">First image</h3>
+    <img src="https://picsum.photos/1200/600" alt=" Large landscape image">
+
+    <h3>Second image</h3>
+    <img src="https://picsum.photos/1200/700" alt=" Another large image">
+
+    <h3>Third image</h3>
+    <img src="https://picsum.photos/1200/800" alt=" Third large image">
+
+
+    <script>
+        window.addEventListener("load", function () {
+            var ul = document.querySelector("#myUL");
+            // i want the ul to get smaller when scroll down 100px
+            window.addEventListener("scroll", function () {
+                // check before if the height is scrolled more than 100px
+                var h = document.documentElement.scrollTop | document.body.scrollTop;
+                if (h >= 200) {
+                    if (myUL.classList.contains("padded")) {
+                        //it will to remove padded if scrolled more than 100px
+                        ul.classList.remove("padded");
+                    }
+                }
+                else {
+                    // if less than 100px scrolled it will add padded
+                    if (!myUL.classList.contains("padded")) {
+                        ul.classList.add("padded");
+                    }
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

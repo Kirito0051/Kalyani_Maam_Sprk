@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Crime Scene Investigator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>🕵️ CSS Crime Scene Investigator</h1>
+        <p>Paste your code. Watch the crime scene render live.</p>
+
+        <div class="grid">
+            <div class="card">
+                <h3>HTML</h3>
+                <textarea id="htmlInput"></textarea>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <textarea id="cssInput"></textarea>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button onclick="investigate()">Investigate</button>
+        </div>
+
+        <div class="card">
+            <h3>Live Preview</h3>
+            <iframe id="preview" class="preview-frame"></iframe>
+        </div>
+
+        <div class="card report" id="report"></div>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+
+</html>

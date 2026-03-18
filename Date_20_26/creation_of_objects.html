@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2 id="output"></h2>
+
+    <script>
+        let car = new Object();
+        car.name = "Audi";
+        car.seats = 7;
+        car.fuel = "petrol";
+
+        console.log("this car name is " + car.name)
+        console.log("this car seats is " + car.seats)
+        console.log("this car fuel is " + car.fuel)
+
+        document.getElementById("output").innerText = "car name is " + car.name;
+    </script>
+</body>
+
+</html>

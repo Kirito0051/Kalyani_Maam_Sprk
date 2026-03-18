@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .mainpage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 400px;
+        }
+
+        .page-wrapper {
+            max-width: 1920px;
+            min-width: 400px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        section {
+            padding: 16px;
+        }
+
+        section h1 {
+            font-size: 40px;
+            font-weight: 600;
+            text-decoration: underline;
+            margin-top: 40px;
+        }
+
+        section p {
+            line-height: 1.2;
+            text-indent: 50px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+    </style>
+    <div class="mainpage">
+        <main class="page-wrapper">
+            <section>
+                <h1>Some Title</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et delectus dolorum adipisci maiores animi,
+                    voluptatum cupiditate magni recusandae temporibus at, omnis doloremque exercitationem ab similique,
+                    asperiores repellat veniam ratione porro!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel eligendi doloribus neque odit excepturi
+                    temporibus magni repudiandae, obcaecati, quasi voluptatibus alias fugit exercitationem minima vero
+                    nemo quis fugiat voluptate suscipit.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et delectus dolorum adipisci maiores animi,
+                    voluptatum cupiditate magni recusandae temporibus at, omnis doloremque exercitationem ab similique,
+                    asperiores repellat veniam ratione porro!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel eligendi doloribus neque odit excepturi
+                    temporibus magni repudiandae, obcaecati, quasi voluptatibus alias fugit exercitationem minima vero
+                    nemo quis fugiat voluptate suscipit.</p>
+            </section>
+            <section>
+                <h1>Some Title 2</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et delectus dolorum adipisci maiores animi,
+                    voluptatum cupiditate magni recusandae temporibus at, omnis doloremque exercitationem ab similique,
+                    asperiores repellat veniam ratione porro!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel eligendi doloribus neque odit excepturi
+                    temporibus magni repudiandae, obcaecati, quasi voluptatibus alias fugit exercitationem minima vero
+                    nemo quis fugiat voluptate suscipit.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et delectus dolorum adipisci maiores animi,
+                    voluptatum cupiditate magni recusandae temporibus at, omnis doloremque exercitationem ab similique,
+                    asperiores repellat veniam ratione porro!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel eligendi doloribus neque odit excepturi
+                    temporibus magni repudiandae, obcaecati, quasi voluptatibus alias fugit exercitationem minima vero
+                    nemo quis fugiat voluptate suscipit.</p>
+            </section>
+            <style>
+                .menu-btn {
+                    background-color: white;
+                    padding: 0 5px 5px 5px;
+                    border-radius: 4px;
+                    border: 1px solid grey;
+                    color: grey;
+                    font-size: 32px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: fixed;
+                    top: 10px;
+                    left: 10px;
+                    z-index: 1;
+                }
+            </style>
+            <button class="menu-btn">
+                &equiv;
+                <!-- for the three lines (hamburger) -->
+            </button>
+            <style>
+                .side-menu {
+                    position: fixed;
+                    height: 100vh;
+                    /* equal to screen height */
+                    padding: 50px 16px;
+                    min-width: 200px;
+                    width: 200px;
+                    top: 0;
+                    left: 0;
+                    background-color: white;
+                    box-shadow: 0 2px 3px lightgrey inset;
+                    transform: translateX(-100%);
+                    transition: 0.4s;
+                }
+
+                .menu-item {
+                    margin-top: 16px;
+                }
+
+                .show-menu {
+                    transform: translateX(0);
+                }
+            </style>
+            <div class="side-menu">
+                <div class="menu-item">HOME</div>
+                <div class="menu-item">GALLERY</div>
+                <div class="menu-item">CONTACT</div>
+            </div>
+
+        </main>
+    </div>
+    <script>
+        var sideMenu = document.querySelector(".side-menu");
+        document.querySelector(".menu-btn").addEventListener("click", (ev) => {
+            //sideMenu.classList.toggle("show-menu");
+            if (sideMenu.classList.contains("show-menu")) {
+                ev.target.innerHTML = "&equiv;";
+                sideMenu.classList.remove("show-menu")
+            }
+            else {
+                ev.target.innerHTML = "&#10006;";
+                sideMenu.classList.add("show-menu");
+            }
+        })
+    </script>
+</body>
+
+</html>

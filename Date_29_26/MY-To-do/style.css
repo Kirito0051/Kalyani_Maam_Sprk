@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Inter, system-ui, sans-serif; */
+    font-family: cursive;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background: #e9ecf3;
+    height: calc(100vh - 60px);
+    /* 100vh minus body padding top + bottom */
+    overflow: hidden;
+}
+
+.app {
+    display: flex;
+    height: 100%;
+    /* full height of body */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+
+/* LEFT PANEL */
+.sidebar {
+    width: 35%;
+    background: #1f2640;
+    color: #fff;
+    padding: 30px;
+}
+
+.sidebar h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.sidebar p {
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+.search {
+    background: #2c3357;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 100%;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.project {
+    height: 90px;
+    border-radius: 16px;
+    border: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+
+}
+
+.project:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* COLORS */
+.pink {
+    background: linear-gradient(135deg, #ff5f9e, #a855f7);
+}
+
+.blue {
+    background: linear-gradient(135deg, #22d3ee, #3b82f6);
+}
+
+.purple {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+}
+
+.orange {
+    background: linear-gradient(135deg, #fb923c, #facc15);
+}
+
+.green {
+    background: linear-gradient(135deg, #34d399, #10b981);
+}
+
+/* RIGHT PANEL */
+.content {
+    width: 65%;
+    background: #fff;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    /* fill parent .app height */
+}
+
+.task-container {
+    flex: 1;
+    /* take remaining height */
+    overflow-y: auto;
+    /* scroll inside this container */
+    margin-top: 20px;
+    padding-right: 10px;
+    /* space for scrollbar */
+}
+
+
+.subtitle {
+    opacity: 0.6;
+}
+
+.section {
+    margin-top: 30px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.task input {
+    width: 18px;
+    height: 18px;
+}
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status {
+    cursor: pointer;
+    user-select: none;
+}
+
+.status:hover {
+    opacity: 0.85;
+}
+
+.approved {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.progress {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.waiting {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.add-btn {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background: #8b5cf6;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.clear-btn {
+    position: absolute;
+    right: 30px;
+    top: 100px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background: #ef4444;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.clear-btn:hover {
+    background: #dc2626;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    padding: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease, transform 0.1s ease;
+}
+
+.delete-btn:hover {
+    background: rgba(239, 68, 68, 0.15);
+}
+
+.delete-btn:active {
+    transform: scale(0.95);
+}
+
+.delete-btn img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover img {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+/* Make content a flex column */
+.content {
+    width: 65%;
+    background: #fff;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+/* Header + subtitle occupy natural space, tasks scroll */
+.task-container {
+    flex: 1;
+    /* fill remaining vertical space */
+    overflow-y: auto;
+    /* scroll only this container */
+    margin-top: 20px;
+    padding-right: 10px;
+    /* space for scrollbar */
+}
+
+/* Custom scrollbar */
+.task-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.task-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.task-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff9a9e, #fad0c4);
+    border-radius: 10px;
+}
+
+.task-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff758c, #ff7eb3);
+}
+
+/* Firefox scrollbar */
+.task-container {
+    scrollbar-width: thin;
+    scrollbar-color: #a29e9e transparent;
+}
+
+#sectionSelect {
+    position: absolute;
+    right: 100px;
+    top: 107px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: none;
+    background: #8b5cf6;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(59, 246, 174, 0.4);
+}
+
+#projectSelect {
+    position: absolute;
+    right: 100px;
+    top: 37px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: none;
+    background: #ef4444;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}

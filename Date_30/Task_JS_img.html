@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <style>
+        img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+
+    <h2>the buld is currently <span id="status">ON</span></h2>
+
+
+    <div class="container">
+        <img src="img/on.png" alt="">
+
+    </div>
+
+     write code to make the images turn on and off on clicking the button 
+    <button id="ONBtn">ON</button>
+    <button id="OFFBtn">OFF</button>
+
+
+    <script>
+        var images = document.querySelectorAll("img");
+        const status = document.querySelector("#status");
+        document.querySelector("#ONBtn").addEventListener("click", function () {
+            images[0].src = "img/on.png";
+            status.innerText = "ON";
+        });
+
+        document.querySelector("#OFFBtn").addEventListener("click", function () {
+            images[0].src = "img/off.png";
+            status.innerText = "OFF";
+        });
+    </script>
+ -->
+
+    <!-- Sirs way to do the same -->
+
+    <img src="img/off.png" alt="" height="400" id="bulb">
+
+    <button id="ONBtn">ON</button>
+    <button id="OFFBtn" disabled>OFF</button>
+
+    <script>
+        var bulb = document.querySelector("#bulb");
+        var onBtn = document.querySelector("#ONBtn");
+        var offBtn = document.querySelector("#OFFBtn");
+
+        OFFBtn.addEventListener("click", function () {
+            bulb.setAttribute("src", "img/OFF.png");
+            onBtn.removeAttribute("disabled");
+            offBtn.setAttribute("disabled", "");
+        });
+
+        ONBtn.addEventListener("click", function () {
+            bulb.setAttribute("src", "img/ON.png");
+            offBtn.removeAttribute("disabled");
+            onBtn.setAttribute("disabled", "");
+        });
+    </script>
+
+</html>

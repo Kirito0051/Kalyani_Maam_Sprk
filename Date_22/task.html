@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Bill {
+            constructor(amount = 0, discount = "") {
+                this.amount = amount;
+                this.discount = discount;
+
+                this.calctotal = () => (this.amount - this.discount);
+            }
+        }
+        var b = new Bill(1000, 100);
+        console.log("Discount is: " + b.discount); // Discount is: 100
+        console.log("Amount is: " + b.amount); // Amount is: 1000
+        console.log(`Total Amount is: ${b.calctotal()}`); // Net Amount
+
+
+    </script>
+
+    <script>
+        class Bill1 {
+            constructor(amount = 0, discount = 0) {
+                this.amount = amount;
+                this.discount = discount;
+            }
+
+            netAmount() {
+                return this.amount - this.discount;
+            }
+            calcDiscount(percent = 0) {
+                this.discount = (this.amount * percent) / 100;
+            }
+            // calcTotal(taxPercent = 0) {
+            //     let net = this.netAmount();
+            //     let tax = (net * taxPercent) / 100;
+            //     return net + tax;
+            // }
+        }
+
+        var b1 = new Bill1(2000);
+        b1.calcDiscount(10); // 10% discount
+        console.log("Discount is: " + b1.discount); // Discount is: 200
+        console.log("Amount is: " + b1.amount); // Amount is: 2000
+        console.log(`Net Amount is: ${b1.netAmount()}`); // Net Amount: 1800    
+    </script>
+
+</body>
+
+</html>

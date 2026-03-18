@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 6</title>
+</head>
+
+<body>
+
+    <h1>JavaScript in HTML</h1>
+    <h1 class="special"></h1>
+    <h1 id="demo"></h1>
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <h2>JavaScript in HTML</h2>
+    <h2 class="special2"></h2>
+    <h2 id="demo2"></h2>
+
+
+
+
+    <script>
+        // js in html / js in detail / optimal (querySelectorall later)
+        document.querySelector("h1").innerText = "Hello World!";
+        document.querySelector(".special").innerText = "Hello Class!";
+        document.getElementById("demo").innerText = "Hello Demo!";
+        document.querySelector("ul li:nth-of-type(2)").innerText = "changed!";
+
+
+        //Old way 
+
+        document.getElementsByTagName("h2")[0].innerText = "Hello World H2!";
+        document.getElementsByClassName("special2")[0].innerText = "Hello Class H2!";
+        document.getElementById("demo2").innerText = "Hello Demo H2!";
+        document.getElementsByTagName("li")[2].innerText = "Hello Item 3 change using old way!";
+    </script>
+
+    <script>
+        // to get data or text in console using getelement
+
+        console.log(document.getElementById("demo").innerText);
+        var data = document.querySelector("h1").innerText;
+        console.log(data);
+    </script>
+
+</body>
+
+</html>

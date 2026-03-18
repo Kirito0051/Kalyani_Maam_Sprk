@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [235, 88, 77, 55, 65];
+        /* for loop can be used for printing 
+           but another way to print is -- call back function*/
+
+
+        function printNumber(num) {
+            if (num) // shortcut to check if num exists ; will evalute false if it is null or undefined i.e falsy ; and other way if num is truthy
+                console.log(num);
+        }
+
+        function printNumberAndIndex(num, idx) {
+            if (num)
+                console.log(`${idx} : ${num}`)
+        }
+
+        function doubleNumber(num, idx, o) {
+            o[idx] = num * 2;
+        }
+        arr.forEach(printNumber);
+        //forEach sends the number each time in printNumber
+
+        arr.forEach(printNumberAndIndex);
+
+        arr.forEach(doubleNumber);
+        arr.forEach(printNumber);
+
+    </script>
+</body>
+
+</html>

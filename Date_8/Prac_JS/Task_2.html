@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="Task_2_style.css" />
+
+    <title>Contact Manager</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <h3>Contact Us:</h3>
+
+            <h1>
+                Lets <span>Discuss</span> <br />
+                Your <br />
+                Ideas and Thoughts
+            </h1>
+
+            <h3>For further information, please reach out to us at:</h3>
+
+            <div class="info">
+                <div class="icon-text">
+                    <img src="Img/email.png" alt="Email icon" />
+                    <h3>
+                        E-mail: <br />
+                        anas0066@gmail.com
+                    </h3>
+                </div>
+
+                <div class="icon-text">
+                    <img src="Img/phone-call.png" alt="Phone icon" />
+                    <h3>
+                        Contact: <br />
+                        +91 9876543210
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2 id="formTitle">Add Contact</h2>
+
+            <label>Name</label>
+            <input id="name" type="text" placeholder="Enter your name" />
+            <div id="nameError" class="error"></div>
+
+            <label>Email</label>
+            <input id="email" type="email" placeholder="Enter your email" />
+            <div id="emailError" class="error"></div>
+
+            <label>Phone</label>
+            <input id="phone" type="tel" placeholder="Enter your phone number" />
+            <div id="phoneError" class="error"></div>
+
+            <label>City</label>
+            <input id="city" type="text" placeholder="City (optional)" />
+
+            <button id="addBtn">Add Contact</button>
+            <button id="updateBtn" class="hidden">Update</button>
+            <button id="cancelBtn" class="hidden">Cancel</button>
+        </div>
+    </div>
+
+    <div class=" contact" style="width: 30%; margin: auto; margin-top: 20px; text-align: center">
+        <h2>Search Contacts</h2>
+        <input id="search" type="text" placeholder="Search contacts..." />
+    </div>
+
+    <div style="margin: auto; margin-top: 20px; text-align: center" class="contact_list">
+        <h2>Submitted Contacts (<span id="count">0</span>)</h2>
+        <div id="contactList"></div>
+    </div>
+
+    <script src="Task_2_script.js"></script>
+</body>
+
+</html>
